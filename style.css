@@ -7,6 +7,15 @@ h1 {
   text-align: center;
 }
 
+
+
+@media (max-width: 500px){
+  iframe {
+    width: 80%;
+    height: 80%;
+  }
+}
+
 @keyframes zoom {
   from {
     transform: scale(0.1);
