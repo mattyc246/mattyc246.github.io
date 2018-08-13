@@ -1,6 +1,9 @@
 body {
   font-family: "Dosis", "Arial", sans-serif!important;
   display: block;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 h1 {
@@ -83,9 +86,6 @@ footer {
     background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url(./images/light.jpeg) no-repeat center center fixed;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
      /*background-attachment: scroll; */
     background-size: cover;
   }
