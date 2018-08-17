@@ -1,30 +1,124 @@
 body {
   font-family: "Dosis", "Arial", sans-serif!important;
   display: block;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-
-body:after{
-      content:"";
-      position:fixed; /* stretch a fixed position to the whole screen */
-      top:0;
-      height:100vh; /* fix for mobile browser address bar appearing disappearing */
-      left:0;
-      right:0;
-      z-index:-1; /* needed to keep in the background */
-      background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url(./images/light.jpeg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+  margin: 0;
 }
 
 h1 {
   text-align: center;
 }
 
+.photo-wall {
+  padding-left: 80px;
+}
+
+
+#tictactoe {
+  max-width: 300px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+}
+
+#sepang {
+  max-width: 300px;
+  width: 100%;
+  max-height: 200px;
+  height: 100%;
+}
+
+.gallery-item {
+  display: inline-flex;
+  flex: wrap;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  max-height: 225px;
+  height: 100%;
+  max-width: 275px;
+  width:100%;
+  vertical-align: top;
+
+}
+
+.gallery-item img {
+  max-width: 275px;
+  width: 100%;
+  max-height: 200px;
+  height: 100%;
+
+}
+
+.gallery-item .caption {
+  display: none
+  ;
+}
+
+.lightbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 80px;
+  color: rgb(161, 164, 168);
+  margin: 0;
+}
+
+.videobox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 80px;
+  color: rgb(161, 164, 168);
+  margin: 0;
+}
+
+.videobox-close {
+  float: right;
+  margin-bottom: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.videobox-contents {
+  display: inline-block;
+}
+
+
+.lightbox img{
+  max-height: 60vh;
+  max-width: 80vw;
+}
+
+.lightbox a{
+  color: yellow;
+}
+
+.lightbox-controls {
+
+}
+
+.lightbox-contents {
+  display: inline-block;
+}
+
+.lightbox-close {
+  float: right;
+  margin-bottom: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.hidden {
+  display: none;
+}
 
 
 @media (max-width: 500px){
@@ -38,7 +132,7 @@ h1 {
   from {
     transform: scale(0.1);
   } to {
-    transform: scale(1);
+    transform: scale(1.5);
   }
 }
 
@@ -49,7 +143,7 @@ header h1 {
 
 .card:hover {
   transform: scale(1.10);
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 
 #aboutme {
@@ -98,9 +192,12 @@ footer {
     height: auto;
     min-height: 45rem;
     padding: 15rem 0;
-/*     background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url(./images/light.jpeg) no-repeat center center fixed; */
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url(./images/light.jpeg) no-repeat center center fixed;
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
      /*background-attachment: scroll; */
     background-size: cover;
   }

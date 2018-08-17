@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="
     sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!-- Animation CSS -->
+
+    <link rel="stylesheet" href="animate.css">
+
+
     <!-- Javascript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -40,6 +45,9 @@
             </li>
             <li class="nav-item pl-2 pr-2 border-left border-right">
               <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item pl-2 pr-2 border-left border-right">
+              <a class="nav-link" href="#photo-gallery">Photo Gallery</a>
             </li>
             <li class="nav-item pl-2 pr-2 border-left border-right">
               <a class="nav-link" href="#contactme">Contact Me</a>
@@ -137,7 +145,7 @@
             <img class="card-img-top" src="./images/4.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">My other half</h5>
-              <p class="card-text">Anna Dayana, resident Zouk Graphic Design and all-round amazing person.</p>
+              <p class="card-text">Anna Dayana, resident Zouk Graphic Designer and all-round amazing person.</p>
               <a href="https://www.instagram.com/annadayana" target="_blank"  class="btn btn-primary">Find her!</a>
             </div>
           </div>
@@ -146,7 +154,7 @@
             <img class="card-img-top" src="./images/2.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Why am I in Malaysia?</h5>
-              <p class="card-text">Malaysia is my home now and has been for 12 years. Where else "boleh lah" to everything?</p>
+              <p class="card-text">Malaysia is my home now and has been for 12 years. Where else can you "boleh lah" to everything?</p>
               <a href="https://en.wikipedia.org/wiki/Malaysia" target="_blank"  class="btn btn-primary">Malaysia who?</a>
             </div>
           </div>
@@ -156,16 +164,240 @@
         </div>
       </section>
 
-      <section = id="portfolio" class="container mx-auto d-block">
+      <section id="portfolio" class="container mx-auto d-block mb-4">
 
-          <h2 class="text-center border-secondary border-top border-bottom w-25 mt-2 mb-2 d-block mx-auto">What can I do?</h2>
-        <div class="mx-auto d-block position-relative">
-          <iframe class="mx-auto d-block" width="560" height="315" src="https://www.youtube.com/embed/-gfKHNr63Js" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h2 class="border-secondary border-top border-bottom w-25 mt-2 mb-2 d-block mx-auto text-center p-3">What can I do?</h2>
+
+        <div class="container mx-auto">
+
+          <div class="row justify-content-md-center">
+
+          <div class="card text-center col-lg-4 col-sm-12 m-4 border-0 shadow-lg" style="width: 50rem;">
+            <div class="card-header">
+                2:39.58 @ Sepang Circuit
+              </div>
+              <div class="card-body">
+               <img id="sepang" src="./images/youtubetn.png"/>
+               <p class="card-text mt-2">I set myself a target of breaking the 2:40.00 barrier for a lap time at Sepang and managed to do so on my first real experience at driving on track. Click the video to watch!</p>
+              </div>
+              <div class="card-footer text-muted">
+                4 Years Ago
+              </div>
+          </div>
+
+          <div class="card text-center col-lg-4 col-sm-12 m-4 border-0 shadow-lg" style="width: 50rem;">
+            <div class="card-header">
+                Tic Tac Toe Game
+              </div>
+              <div class="card-body">
+                <img id="tictactoe" src="./images/ttt.png"/>
+                <a href="./tictactoe/index.html" target="_blank" class="btn btn-primary mt-2">Click To Play!</a>
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div>  </div>
+          </div>
+
+        </div>
+        <div class="row justify-content-md-center">
+
+          <div class="card text-center col-lg-4 col-sm-12 m-4 border-0 shadow-lg" style="width: 50rem;">
+            <div class="card-header">
+                Romanize a Number
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group w-50 mx-auto d-block">
+                    <label for="exampleFormControlInput1">Number to Romanize:</label>
+                    <input id="rom-input" class="form-control" type="text" placeholder="Enter Number">
+                  </div>
+                    <input id="convert" value="Romanize" type="submit" class="btn btn-dark d-block mx-auto"></input>
+                </form>      
+                  <div id="romanized" class="container w-100 mt-2 mb-2 d-block mx-auto">  </div>
+              </div>
+              <div class="card-footer text-muted">
+                5 days Ago
+              </div> </div>
+
+          <div class="card text-center col-lg-4 col-sm-12 m-4 border-0 shadow-lg" style="width: 50rem;">
+            <div class="card-header">
+                Hangman
+              </div>
+              <div class="card-body">
+                
+                <h2>Word Guessed So Far</h2>
+                <p id="word"></p>
+
+                <h2>Guessed Alphabets</h2>
+                <ul id="past-guess">
+                </ul>
+
+                <h2>Guess</h2>
+                <p>You have <span id="guesses-left"></span> guesses remaining</p>
+                <form id='player-input'>
+                  <input id='guess-input' type='text'/>
+                  <input type='submit'/>
+                  <button id="new-game" type="button">New Game</button>
+                </form>
+
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div>      </div>
+
+        </div>
+
+        </div>
+      </section>
+
+
+      <section class ='container'>
+        <br/>
+          <h2 id='photo-gallery' class="border-secondary border-top border-bottom w-25 mt-2 mb-2 d-block mx-auto text-center p-3"> Photo Gallery </h2>
+
+        <div class="container mx-auto d-block">
+          <ul class="photo-wall">
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f1.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f2.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f3.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f4.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f5.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f6.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f7.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f8.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f9.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f10.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f11.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f12.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f13.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f14.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f15.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f16.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f17.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f18.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f19.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f20.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f21.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f22.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f23.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInRight fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f24.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f25.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f26.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+            <li class="wow bounceInLeft fast gallery-item border-left border-right border-dark m-3" data-wow-duration="2s">
+              <img src="./images/f27.jpg">
+              <p class="caption">Ferrari: Piloti Ferrari 2014 - Sepang, MY</p>
+            </li>
+          </ul>
+        </div>
+
+         <div class="videobox hidden">
+          <div class="videobox-contents">
+            <div class="videobox-controls">
+              <img src="./images/close.png" class="videobox-close"/>
+            </div>
+
+            <div class='videobox-video'>
+              <iframe width="660" height="415" src="https://www.youtube.com/embed/-gfKHNr63Js" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="lightbox hidden">
+          <div class="lightbox-contents">
+            <div class="lightbox-controls">
+              <img src="./images/close.png" class="lightbox-close"/>
+              <!-- <a href="#" class="lightbox-prev">Prev</a>
+              <a href="#" class="lightbox-next">Next</a> -->
+            </div>
+
+            <div class='lightbox-image'>
+              <img src="./images/458c.jpg">
+              <p class="caption">Team Clearwater Ferrari 458 Challenge</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Container Box 3 -->
-    <section id="contactme" class="container-fluid bg-custom-alt">
+    <section id="contactme" class="wow fadeInUp container-fluid bg-custom-alt" data-wow-duration="3s">
 
       <h2 class="text-center border-secondary border-top border-bottom w-25 mt-4 mb-4 d-block mx-auto">Get in touch</h2>
 
@@ -218,4 +450,11 @@
     </footer>
      
   </body>
+  
+
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="wow.js"></script>
+  <script> 
+    new WOW().init();
+  </script>
 </html>
