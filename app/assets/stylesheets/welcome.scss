@@ -1,0 +1,55 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@keyframes nextArrow {
+    0% {right: 15px;}
+    50% {right: 30px;}
+    100% {right: 15px;}
+}
+
+@keyframes prevArrow {
+    0% {left: 15px;}
+    50% {left: 30px;}
+    100% {left: 15px;}
+}
+
+@keyframes throb {
+	0% {transform: scale(1);}
+	50% {transform: scale(1.25);}
+	100% {transform: scale(1);}
+}
+
+html, body {
+
+	font-family: 'VT323', Orbitron, monospace;
+	background-color: black;
+
+}
+
+#main-heading {
+
+	position: fixed;
+	width: 50vw;
+	left: 50%;
+	top: 0px;
+	margin-left: -25%;
+}
+
+.fp-next {
+
+	animation: nextArrow 2s infinite;
+
+}
+
+.fp-prev {
+
+	animation: prevArrow 2s infinite;
+
+}
+
+.btn-outline-success {
+
+	animation: throb 1s infinite;
+
+}
