@@ -1,0 +1,17 @@
+body {
+
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+
+}
+
+.btn-outline-success {
+
+	position: fixed;
+	left: 50%;
+	bottom: 50%;
+	
+
+
+}
