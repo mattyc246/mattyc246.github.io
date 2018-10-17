@@ -284,3 +284,10 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-17 22:51:33 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (924.4ms)
+Completed 200 OK in 1269ms (Views: 1259.2ms | ActiveRecord: 0.0ms)
+
+
